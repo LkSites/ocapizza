@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oca Pizza - Santa Rosa / RS</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <!-- SVG representando o símbolo do logo (pena + folha) -->
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 50 Q 50 10 90 50 Q 50 90 10 50 Z" fill="#2e7d32"/>
+                    <path d="M20 50 Q 50 20 85 50 Q 50 70 20 50 Z" fill="#fbc02d"/>
+                    <path d="M50 20 C 65 35, 75 40, 85 50" stroke="#d32f2f" stroke-width="4" stroke-linecap="round"/>
+                    <circle cx="20" cy="50" r="4" fill="#d32f2f"/>
+                    <circle cx="28" cy="45" r="3" fill="#d32f2f"/>
+                </svg>
+                <div class="brand-text">
+                    <span class="title-oca">oca</span>
+                    <span class="title-pizza">Pizza</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#home">Início</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#sobre">Nossa História</a>
+                <a href="#depoimentos">Avaliações</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <button class="cart-btn" id="openCartBtn">
+                <i class="fas fa-shopping-basket"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-tag">A Verdadeira Pizza Artesanal</span>
+            <h1>Sabor Nativo & Tradição em Santa Rosa</h1>
+            <p>Massa de fermentação natural, ingredientes selecionados e o forno a lenha que você respeita.</p>
+            <div class="hero-buttons">
+                <a href="#cardapio" class="btn btn-primary"><i class="fas fa-utensils"></i> Ver Cardápio</a>
+                <a href="https://wa.me/5555999999999" target="_blank" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Peça no Whats</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cardápio Section -->
+    <section id="cardapio" class="menu-section container">
+        <div class="section-header">
+            <h2>Nosso Cardápio</h2>
+            <div class="feather-divider">
+                <span></span>
+                <i class="fas fa-leaf"></i>
+                <span></span>
+            </div>
+            <p>Escolha suas opções favoritas e faça seu pedido online!</p>
+        </div>
+
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="todos">Todos</button>
+            <button class="tab-btn" data-category="tradicionais">Tradicionais</button>
+            <button class="tab-btn" data-category="especiais">Especiais da Oca</button>
+            <button class="tab-btn" data-category="doces">Doces</button>
+            <button class="tab-btn" data-category="bebidas">Bebidas</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+            <!-- Os itens serão renderizados via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="about-section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <span class="hero-tag">Nossas Raízes</span>
+                <h2>A História da Oca Pizza</h2>
+                <p>Nascida no coração de Santa Rosa - RS, a Oca Pizza une a ancestralidade do preparo artesanal ao frescor dos ingredientes locais.</p>
+                <p>Nossa missão é levar à sua mesa uma experiência gastronômica aconchegante, com pizzas assadas em forno de pedra na temperatura perfeita.</p>
+                <div class="badges">
+                    <div class="badge-item">
+                        <i class="fas fa-fire"></i>
+                        <span>Forno a Lenha</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-seedling"></i>
+                        <span>Ingredientes Frescos</span>
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-motorcycle"></i>
+                        <span>Entrega Rápida</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Pizza em forno a lenha">
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="reviews-section container">
+        <div class="section-header">
+            <h2>O Que Dizem Nossos Clientes</h2>
+            <div class="feather-divider">
+                <span></span>
+                <i class="fas fa-star"></i>
+                <span></span>
+            </div>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"A melhor pizza de Santa Rosa sem dúvidas! A massa é leve, crocante e o recheio de costela é espetacular."</p>
+                <strong>- Lucas M.</strong>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Entrega super rápida e a pizza chegou quentinha. O atendimento pelo WhatsApp é excelente!"</p>
+                <strong>- Amanda R.</strong>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"A pizza doce de morango com chocolate branco é divina! Virou tradição no nosso fim de semana."</p>
+                <strong>- Roberto S.</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato e Localização -->
+    <section id="contato" class="contact-section container">
+        <div class="contact-box">
+            <div class="contact-info">
+                <h2>Faça-nos uma Visita</h2>
+                <p><i class="fas fa-map-marker-alt"></i> Santa Rosa - RS, Brasil</p>
+                <p><i class="fab fa-whatsapp"></i> (55) 99999-9999</p>
+                <p><i class="fas fa-clock"></i> Terça a Domingo: 18h30 às 23h30</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3516.4851086036136!2d-54.48421872365289!3d-27.871031976090073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fd4938d2f2dfed%3A0x8e833fb35183eb9e!2sSanta%20Rosa%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+                    width="100%" height="250" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrinho Lateral (Drawer) -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-overlay" id="closeCartOverlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Seu Pedido</h3>
+                <button class="close-cart-btn" id="closeCartBtn">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Itens adicionados dinamicamente -->
+            </div>
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span>Total:</span>
+                    <strong id="cartTotal">R$ 0,00</strong>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn"><i class="fab fa-whatsapp"></i> Finalizar no WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Oca Pizza - Santa Rosa / RS. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
